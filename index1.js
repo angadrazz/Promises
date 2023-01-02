@@ -37,4 +37,10 @@ function doATask(callback) {
         function yetAnotherTask() {
         console.log("Task 2 done!")
         }
-        doATask(yetAnotherTask)
+        doATask(yetAnotherTask);
+
+
+const promise = new Promise((resolve,reject) => {
+                resolve(1)
+                })
+                
