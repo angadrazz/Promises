@@ -28,3 +28,13 @@ async function x() {
       }
 
 x();
+
+
+function doATask(callback) {
+        console.log("Task 1 done!")
+        callback()
+        }
+        function yetAnotherTask() {
+        console.log("Task 2 done!")
+        }
+        doATask(yetAnotherTask)
