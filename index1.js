@@ -1,3 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 async function x() {
         try{
           await Promise.reject("Rejected!!")
@@ -5,3 +26,5 @@ async function x() {
           console.log(e)
         }
       }
+
+x();
