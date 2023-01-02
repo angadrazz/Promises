@@ -90,3 +90,22 @@ async function asyncWithCallback(callback) {
 asyncWithCallback(() => {
         console.log("angadwithasyncfunction")
 })
+
+
+function randomAsyncFuntion(){
+        const time = Math.floor(Math.random * 100)
+        const x = setTimeout(() =>{
+                console.log('finished!!byAngad')
+        }, time)
+}
+
+async function asyncWithCallback(callback){
+        randomAsyncFuntion()
+        setTimeout(() => {
+                callback()
+        },1000)
+}
+
+asyncWithCallback(() =>{
+        console.log("customasyncfuntion")
+})
