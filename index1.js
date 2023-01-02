@@ -53,4 +53,42 @@ const promise = new Promise((resolve,reject) => {
                 
                 Promise.all([promise1,promise2,promise3]) .then((msg) => { console.log(msg) })
                 
+
                 
+                async function x() {
+                        try{
+                          await Promise.reject("Rejected!!")
+                        } catch(e) {
+                          console.log(e)
+                        }
+                      }
+                      
+                      x()
+                      .catch((msg) => {
+                        console.log(msg)
+                      })
+
+                      x((a,b,c) => {
+                        return a+b+c
+                      },2,3,6)
+                      
+                      function x(callback,a,b,c) {
+                        let str = ""
+                        setTimeout(() => {
+                          str += "x"
+                        });
+                      
+                        str += callback(a,b,c)
+                        console.log(str)
+                      }
+                      function x() {
+                        Promise.reject('x')
+                        return Promise.resolve('y')
+                      }
+                      
+                      async function log() {
+                        const val =  await x()
+                        console.log(val)
+                      }
+                      
+                      log()
