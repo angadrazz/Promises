@@ -81,7 +81,7 @@ function randomAsyncFuntion() {
 }
 
 async function asyncWithCallback(callback) {
-        randomAsyncFunction()
+        randomAsyncFuntion()
         setTimeout(() => {
                 callback()
         }, 5000)
