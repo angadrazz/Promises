@@ -46,3 +46,11 @@ promise.then(function (data){
 });
 
 console.log(30);
+
+async function x() {
+        try{
+          await Promise.reject("Rejected!!")
+        } catch(e) {
+          console.log(e)
+        }
+      }
